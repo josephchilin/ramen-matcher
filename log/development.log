@@ -550,3 +550,430 @@ Processing by Api::V1::NoodlesController#index as HTML
 Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 6.1ms | Allocations: 4925)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5028892709314412085)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200615213223)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615213223"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateScores (20200615213712)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "user_id" integer, "guesses" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615213712"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5028892709314412085)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (1.0ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (2.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (5.7ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 21:55:52.275982"], ["updated_at", "2020-06-15 21:55:52.275982"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 21:55:52.291048"], ["updated_at", "2020-06-15 21:55:52.291048"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 21:55:52.296982"], ["updated_at", "2020-06-15 21:55:52.296982"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 21:55:52.302948"], ["updated_at", "2020-06-15 21:55:52.302948"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (7.2ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 21:55:52.317145"], ["updated_at", "2020-06-15 21:55:52.317145"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mNoodle Load (1.0ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.7ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 3]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (1.6ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (1.0ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:00:33.901119"], ["updated_at", "2020-06-15 22:00:33.901119"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:00:33.908483"], ["updated_at", "2020-06-15 22:00:33.908483"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:00:33.915370"], ["updated_at", "2020-06-15 22:00:33.915370"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:00:33.921871"], ["updated_at", "2020-06-15 22:00:33.921871"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:00:33.927955"], ["updated_at", "2020-06-15 22:00:33.927955"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.9ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 7]]
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:10:10.551538"], ["updated_at", "2020-06-15 22:10:10.551538"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:10:10.556233"], ["updated_at", "2020-06-15 22:10:10.556233"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:10:10.560011"], ["updated_at", "2020-06-15 22:10:10.560011"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:10:10.564057"], ["updated_at", "2020-06-15 22:10:10.564057"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:10:10.568000"], ["updated_at", "2020-06-15 22:10:10.568000"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (13.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:10:10.588747"], ["updated_at", "2020-06-15 22:10:10.588747"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Create (5.5ms)[0m  [1m[32mINSERT INTO "scores" ("guesses", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["guesses", 3], ["created_at", "2020-06-15 22:10:10.645306"], ["updated_at", "2020-06-15 22:10:10.645306"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.9ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/noodles" for ::1 at 2020-06-15 18:10:42 -0400
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::NoodlesController#index as HTML
+  [1m[36mNoodle Load (1.8ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  ↳ app/controllers/api/v1/noodles_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 16.4ms | ActiveRecord: 12.6ms | Allocations: 5271)
+
+
+Started GET "/api/v1/scores" for ::1 at 2020-06-15 18:10:55 -0400
+Processing by Api::V1::ScoresController#index as HTML
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 0.0ms | Allocations: 70340)
+
+
+  
+NameError (undefined local variable or method `scores' for #<Api::V1::ScoresController:0x00007fb5d3b75760>):
+  
+app/controllers/api/v1/scores_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-15 18:11:15 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (43.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 188ms (Views: 90.1ms | ActiveRecord: 96.2ms | Allocations: 3811)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.9ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 12]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 13]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:13:10.827032"], ["updated_at", "2020-06-15 22:13:10.827032"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:13:10.833741"], ["updated_at", "2020-06-15 22:13:10.833741"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (1.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:13:10.840835"], ["updated_at", "2020-06-15 22:13:10.840835"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:13:10.849600"], ["updated_at", "2020-06-15 22:13:10.849600"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:13:10.853259"], ["updated_at", "2020-06-15 22:13:10.853259"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:13:10.883018"], ["updated_at", "2020-06-15 22:13:10.883018"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (1.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Destroy (2.5ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (1.1ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.8ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (1.0ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (2.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:16:01.839856"], ["updated_at", "2020-06-15 22:16:01.839856"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:16:01.856616"], ["updated_at", "2020-06-15 22:16:01.856616"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:16:01.862940"], ["updated_at", "2020-06-15 22:16:01.862940"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:16:01.867207"], ["updated_at", "2020-06-15 22:16:01.867207"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:16:01.871112"], ["updated_at", "2020-06-15 22:16:01.871112"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:16:01.901940"], ["updated_at", "2020-06-15 22:16:01.901940"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (1.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores" ORDER BY "scores"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.6ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.7ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 22]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:17:56.058838"], ["updated_at", "2020-06-15 22:17:56.058838"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (1.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:17:56.071074"], ["updated_at", "2020-06-15 22:17:56.071074"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:17:56.080351"], ["updated_at", "2020-06-15 22:17:56.080351"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:17:56.085429"], ["updated_at", "2020-06-15 22:17:56.085429"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (1.8ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:17:56.091095"], ["updated_at", "2020-06-15 22:17:56.091095"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:17:56.143493"], ["updated_at", "2020-06-15 22:17:56.143493"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Create (0.7ms)[0m  [1m[32mINSERT INTO "scores" ("guesses", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["guesses", 3], ["created_at", "2020-06-15 22:17:56.169687"], ["updated_at", "2020-06-15 22:17:56.169687"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.7ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 27]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 30]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:19:44.170646"], ["updated_at", "2020-06-15 22:19:44.170646"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:19:44.175143"], ["updated_at", "2020-06-15 22:19:44.175143"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:19:44.179227"], ["updated_at", "2020-06-15 22:19:44.179227"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:19:44.183098"], ["updated_at", "2020-06-15 22:19:44.183098"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:19:44.195031"], ["updated_at", "2020-06-15 22:19:44.195031"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:19:44.234474"], ["updated_at", "2020-06-15 22:19:44.234474"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (2.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Destroy (0.4ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Create (0.5ms)[0m  [1m[32mINSERT INTO "scores" ("user_id", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["guesses", 3], ["created_at", "2020-06-15 22:19:44.275843"], ["updated_at", "2020-06-15 22:19:44.275843"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.9ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 32]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (2.2ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "back"], ["imageUrl", "/images/back.jpg"], ["created_at", "2020-06-15 22:20:51.355172"], ["updated_at", "2020-06-15 22:20:51.355172"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "/images/ichiran.jpg"], ["created_at", "2020-06-15 22:20:51.365748"], ["updated_at", "2020-06-15 22:20:51.365748"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "/images/momosan.jpg"], ["created_at", "2020-06-15 22:20:51.370687"], ["updated_at", "2020-06-15 22:20:51.370687"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "/images/nakiryu.jpg"], ["created_at", "2020-06-15 22:20:51.374574"], ["updated_at", "2020-06-15 22:20:51.374574"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "/images/tsuta.jpg"], ["created_at", "2020-06-15 22:20:51.378632"], ["updated_at", "2020-06-15 22:20:51.378632"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beef"], ["created_at", "2020-06-15 22:20:51.422487"], ["updated_at", "2020-06-15 22:20:51.422487"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Destroy (0.6ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mScore Create (0.6ms)[0m  [1m[32mINSERT INTO "scores" ("user_id", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["guesses", 3], ["created_at", "2020-06-15 22:20:51.507364"], ["updated_at", "2020-06-15 22:20:51.507364"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 11]]
+Started GET "/api/v1/scores" for ::1 at 2020-06-15 18:21:44 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ScoresController#index as HTML
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.0ms | Allocations: 71054)
+
+
+  
+NameError (undefined local variable or method `scores' for #<Api::V1::ScoresController:0x00007fe5ead1b4b0>):
+  
+app/controllers/api/v1/scores_controller.rb:5:in `index'
+Started GET "/api/v1/scores" for ::1 at 2020-06-15 18:21:46 -0400
+Processing by Api::V1::ScoresController#index as HTML
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.0ms | Allocations: 70159)
+
+
+  
+NameError (undefined local variable or method `scores' for #<Api::V1::ScoresController:0x00007fe5eac3eab0>):
+  
+app/controllers/api/v1/scores_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-15 18:21:49 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 70ms (Views: 15.5ms | ActiveRecord: 45.7ms | Allocations: 4895)
+
+
+Started GET "/api/v1/noodles" for ::1 at 2020-06-15 18:21:52 -0400
+Processing by Api::V1::NoodlesController#index as HTML
+  [1m[36mNoodle Load (11.0ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  ↳ app/controllers/api/v1/noodles_controller.rb:5:in `index'
+Completed 200 OK in 68ms (Views: 20.0ms | ActiveRecord: 44.5ms | Allocations: 4690)
+
+
+Started GET "/api/v1/scores" for ::1 at 2020-06-15 18:21:55 -0400
+Processing by Api::V1::ScoresController#index as HTML
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 0.0ms | Allocations: 70134)
+
+
+  
+NameError (undefined local variable or method `scores' for #<Api::V1::ScoresController:0x00007fe5eb328df8>):
+  
+app/controllers/api/v1/scores_controller.rb:5:in `index'
+Started GET "/api/v1/scores" for ::1 at 2020-06-15 18:22:25 -0400
+Processing by Api::V1::ScoresController#index as HTML
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  ↳ app/controllers/api/v1/scores_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 12.2ms | Allocations: 4845)
+
+

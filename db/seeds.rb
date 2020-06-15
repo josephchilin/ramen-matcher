@@ -18,4 +18,31 @@ noodle_3 = Noodle.create(name: "momosan", imageUrl: "/images/momosan.jpg")
 noodle_4 = Noodle.create(name: "nakiryu", imageUrl: "/images/nakiryu.jpg")
 noodle_5 = Noodle.create(name: "tsuta", imageUrl: "/images/tsuta.jpg")
 
+puts "Destroying users"
 
+User.destroy_all
+
+puts "Creating users"
+
+user_1 = User.create(name: "Beef")
+
+puts "Destroying scores"
+
+Score.destroy_all
+
+puts "Creating scores"
+
+score_1 = Score.create(user_id: user_1.id, guesses: 3)
+
+# create_table "scores", force: :cascade do |t|
+#     t.integer "user_id"
+#     t.integer "guesses"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#   end
+
+#   create_table "users", force: :cascade do |t|
+#     t.string "name"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#   end
