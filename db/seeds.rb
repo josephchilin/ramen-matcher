@@ -12,11 +12,10 @@ Noodle.destroy_all
 
 puts "Creating noodles"
 
-noodle_1 = Noodle.create(name: "back", imageUrl: "/images/back.jpg")
-noodle_2 = Noodle.create(name: "ichiran", imageUrl: "/images/ichiran.jpg")
-noodle_3 = Noodle.create(name: "momosan", imageUrl: "/images/momosan.jpg")
-noodle_4 = Noodle.create(name: "nakiryu", imageUrl: "/images/nakiryu.jpg")
-noodle_5 = Noodle.create(name: "tsuta", imageUrl: "/images/tsuta.jpg")
+noodle_2 = Noodle.create(name: "ichiran", imageUrl: "https://i.imgur.com/xWTTbBx.jpg")
+noodle_3 = Noodle.create(name: "momosan", imageUrl: "https://i.imgur.com/VCbUDIA.jpg")
+noodle_4 = Noodle.create(name: "nakiryu", imageUrl: "https://i.imgur.com/Ii1vbsK.jpg")
+noodle_5 = Noodle.create(name: "tsuta", imageUrl: "https://i.imgur.com/UwPJR2C.jpg")
 
 puts "Destroying users"
 
@@ -24,7 +23,8 @@ User.destroy_all
 
 puts "Creating users"
 
-user_1 = User.create(name: "Beef")
+user_1 = User.create(name: "Yoda", guesses: 10)
+user_2 = User.create(name: "Luke", guesses: 7)
 
 puts "Destroying scores"
 
