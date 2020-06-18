@@ -3274,3 +3274,311 @@ Processing by Api::V1::UsersController#index as HTML
 Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 1579)
 
 
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:29:32 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 5.8ms | Allocations: 5571)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 21:47:56 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:47:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 2730)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Obi-Wan", "guesses"=>8, "user"=>{"name"=>"Obi-Wan", "guesses"=>8}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Obi-Wan"], ["guesses", 8], ["created_at", "2020-06-18 01:47:56.587761"], ["updated_at", "2020-06-18 01:47:56.587761"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 22ms (Views: 0.6ms | ActiveRecord: 15.2ms | Allocations: 2707)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:49:54 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 21:49:54 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Wedge", "guesses"=>7, "user"=>{"name"=>"Wedge", "guesses"=>7}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.5ms | Allocations: 2747)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wedge"], ["guesses", 7], ["created_at", "2020-06-18 01:49:54.510664"], ["updated_at", "2020-06-18 01:49:54.510664"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 7.8ms | Allocations: 4243)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 21:50:47 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:50:47 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Biggs", "guesses"=>9, "user"=>{"name"=>"Biggs", "guesses"=>9}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.3ms | Allocations: 2771)
+
+
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Biggs"], ["guesses", 9], ["created_at", "2020-06-18 01:50:47.180872"], ["updated_at", "2020-06-18 01:50:47.180872"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 4301)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:55:01 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 21:55:01 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Nami", "guesses"=>7, "user"=>{"name"=>"Nami", "guesses"=>7}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.1ms | Allocations: 2587)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nami"], ["guesses", 7], ["created_at", "2020-06-18 01:55:01.555941"], ["updated_at", "2020-06-18 01:55:01.555941"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 10.9ms | Allocations: 4414)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 21:59:57 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 21:59:57 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Chopper", "guesses"=>7, "user"=>{"name"=>"Chopper", "guesses"=>7}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.5ms | Allocations: 2946)
+
+
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chopper"], ["guesses", 7], ["created_at", "2020-06-18 01:59:57.479660"], ["updated_at", "2020-06-18 01:59:57.479660"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 7.6ms | Allocations: 4455)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:03:02 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `sort_by'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.5ms | Allocations: 4839)
+
+
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:4:in `sort_by'
+app/controllers/api/v1/users_controller.rb:4:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:03:03 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `sort_by'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 889)
+
+
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:4:in `sort_by'
+app/controllers/api/v1/users_controller.rb:4:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:03:59 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ (byebug):1:in `sort_by'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (byebug):1:in `index'
+Completed 500 Internal Server Error in 124127ms (ActiveRecord: 5.7ms | Allocations: 331270)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:04 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:04 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:04 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:16 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:17 -0400
+Processing by Api::V1::UsersController#index as HTML
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (45.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by Api::V1::UsersController#index as HTML
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+  [1m[36mUser Load (32.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 220.9ms | Allocations: 2028396)
+
+
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 148.3ms | Allocations: 1580991)
+
+
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 63.0ms | Allocations: 1784656)
+
+
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:06:35 -0400
+Processing by Api::V1::UsersController#index as HTML
+Processing by Api::V1::UsersController#index as HTML
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 50.4ms | Allocations: 1638797)
+
+
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 127.4ms | Allocations: 1490670)
+
+
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 166.0ms | Allocations: 1744199)
+
+
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+  
+ArgumentError (comparison of NilClass with 8 failed):
+  
+app/controllers/api/v1/users_controller.rb:5:in `sort_by'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:09:20 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ (byebug):1:in `index'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ (byebug):1:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:16:45 -0400
+Completed 500 Internal Server Error in 444791ms (ActiveRecord: 9.3ms | Allocations: 224757)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 1834ms (ActiveRecord: 0.0ms | Allocations: 35041)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:16:53 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `sort'
+Completed 500 Internal Server Error in 725ms (ActiveRecord: 14.7ms | Allocations: 4610378)
+
+
+  
+NoMethodError (undefined method `user' for #<User:0x00007fe1c6fb2f48>
+Did you mean?  super):
+  
+app/controllers/api/v1/users_controller.rb:5:in `block in index'
+app/controllers/api/v1/users_controller.rb:5:in `sort'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:17:36 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 236ms (Views: 199.1ms | ActiveRecord: 11.6ms | Allocations: 1569045)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:23:23 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 64863ms (ActiveRecord: 1.1ms | Allocations: 195150)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:24:34 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 280ms (Views: 204.2ms | ActiveRecord: 19.8ms | Allocations: 1734085)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:26:38 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:26:38 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Sanji", "guesses"=>6, "user"=>{"name"=>"Sanji", "guesses"=>6}}
+  [1m[35m (9.9ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#index as */*
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mUser Create (21.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sanji"], ["guesses", 6], ["created_at", "2020-06-18 02:26:43.440629"], ["updated_at", "2020-06-18 02:26:43.440629"]]
+Completed 200 OK in 163ms (Views: 141.9ms | ActiveRecord: 8.8ms | Allocations: 1009929)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 432ms (Views: 10.6ms | ActiveRecord: 75.2ms | Allocations: 2628157)
+
+

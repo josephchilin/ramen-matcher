@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        users = User.all
+        # byebug
+        users = User.order(:guesses)
         render json: users, except: [:created_at, :updated_at]
     end
 
