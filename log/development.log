@@ -3582,3 +3582,1075 @@ Completed 200 OK in 163ms (Views: 141.9ms | ActiveRecord: 8.8ms | Allocations: 1
 Completed 200 OK in 432ms (Views: 10.6ms | ActiveRecord: 75.2ms | Allocations: 2628157)
 
 
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:30:49 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:30:49 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Vivi", "guesses"=>8, "user"=>{"name"=>"Vivi", "guesses"=>8}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 3.4ms | ActiveRecord: 11.6ms | Allocations: 6351)
+
+
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vivi"], ["guesses", 8], ["created_at", "2020-06-18 02:30:49.406863"], ["updated_at", "2020-06-18 02:30:49.406863"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 15.2ms | Allocations: 8163)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:31:01 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 2148)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:39:39 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:39:39 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Tarkin", "guesses"=>9, "user"=>{"name"=>"Tarkin", "guesses"=>9}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.9ms | Allocations: 3270)
+
+
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tarkin"], ["guesses", 9], ["created_at", "2020-06-18 02:39:39.105314"], ["updated_at", "2020-06-18 02:39:39.105314"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 9.0ms | Allocations: 4774)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:41:21 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Godzilla", "guesses"=>8, "user"=>{"name"=>"Godzilla", "guesses"=>8}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godzilla"], ["guesses", 8], ["created_at", "2020-06-18 02:41:21.467541"], ["updated_at", "2020-06-18 02:41:21.467541"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 6.3ms | Allocations: 2501)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:43:47 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:43:47 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  Parameters: {"name"=>"Arya", "guesses"=>8, "user"=>{"name"=>"Arya", "guesses"=>8}}
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 3062)
+
+
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Arya"], ["guesses", 8], ["created_at", "2020-06-18 02:43:47.726161"], ["updated_at", "2020-06-18 02:43:47.726161"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 12.2ms | Allocations: 4250)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:44:51 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:44:51 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  Parameters: {"name"=>"Tyrion", "guesses"=>8, "user"=>{"name"=>"Tyrion", "guesses"=>8}}
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 3095)
+
+
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tyrion"], ["guesses", 8], ["created_at", "2020-06-18 02:44:51.703651"], ["updated_at", "2020-06-18 02:44:51.703651"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 11.9ms | Allocations: 4272)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 22:49:15 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:49:15 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  Parameters: {"name"=>"Stark", "guesses"=>7, "user"=>{"name"=>"Stark", "guesses"=>7}}
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 3062)
+
+
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (8.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stark"], ["guesses", 7], ["created_at", "2020-06-18 02:49:15.776267"], ["updated_at", "2020-06-18 02:49:15.776267"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 17.6ms | Allocations: 4347)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 22:59:36 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Chewie", "guesses"=>8, "user"=>{"name"=>"Chewie", "guesses"=>8}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chewie"], ["guesses", 8], ["created_at", "2020-06-18 02:59:36.305474"], ["updated_at", "2020-06-18 02:59:36.305474"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 13.3ms | Allocations: 2503)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:00:41 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:00:41 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 2621)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Kylo", "guesses"=>7, "user"=>{"name"=>"Kylo", "guesses"=>7}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Kylo"], ["guesses", 7], ["created_at", "2020-06-18 03:00:41.686796"], ["updated_at", "2020-06-18 03:00:41.686796"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 5.9ms | Allocations: 2501)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:02:37 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:02:37 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Arya", "guesses"=>9, "user"=>{"name"=>"Arya", "guesses"=>9}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.4ms | Allocations: 3787)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Arya"], ["guesses", 9], ["created_at", "2020-06-18 03:02:37.913202"], ["updated_at", "2020-06-18 03:02:37.913202"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 8.3ms | Allocations: 5290)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.7ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (2.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "https://i.imgur.com/xWTTbBx.jpg"], ["created_at", "2020-06-18 03:07:45.144972"], ["updated_at", "2020-06-18 03:07:45.144972"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "https://i.imgur.com/VCbUDIA.jpg"], ["created_at", "2020-06-18 03:07:45.150599"], ["updated_at", "2020-06-18 03:07:45.150599"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "https://i.imgur.com/Ii1vbsK.jpg"], ["created_at", "2020-06-18 03:07:45.155615"], ["updated_at", "2020-06-18 03:07:45.155615"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.2ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "https://i.imgur.com/UwPJR2C.jpg"], ["created_at", "2020-06-18 03:07:45.160521"], ["updated_at", "2020-06-18 03:07:45.160521"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yoda"], ["guesses", 10], ["created_at", "2020-06-18 03:07:45.291991"], ["updated_at", "2020-06-18 03:07:45.291991"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luke"], ["guesses", 7], ["created_at", "2020-06-18 03:07:45.296882"], ["updated_at", "2020-06-18 03:07:45.296882"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Create (0.4ms)[0m  [1m[32mINSERT INTO "scores" ("user_id", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 25], ["guesses", 3], ["created_at", "2020-06-18 03:07:45.322160"], ["updated_at", "2020-06-18 03:07:45.322160"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:07:51 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 4.8ms | Allocations: 5048)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:10:20 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:10:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Leia", "guesses"=>8, "user"=>{"name"=>"Leia", "guesses"=>8}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Leia"], ["guesses", 8], ["created_at", "2020-06-18 03:10:20.524907"], ["updated_at", "2020-06-18 03:10:20.524907"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 2705)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:14:50 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:14:50 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Chewie", "guesses"=>11, "user"=>{"name"=>"Chewie", "guesses"=>11}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 1477)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chewie"], ["guesses", 11], ["created_at", "2020-06-18 03:14:50.426186"], ["updated_at", "2020-06-18 03:14:50.426186"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 3748)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:16:08 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:16:08 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Wedge", "guesses"=>6, "user"=>{"name"=>"Wedge", "guesses"=>6}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 2614)
+
+
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wedge"], ["guesses", 6], ["created_at", "2020-06-18 03:16:08.072049"], ["updated_at", "2020-06-18 03:16:08.072049"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 7.3ms | Allocations: 3770)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:49:33 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:49:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 1668)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Tony", "guesses"=>14, "user"=>{"name"=>"Tony", "guesses"=>14}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tony"], ["guesses", 14], ["created_at", "2020-06-18 03:49:33.387160"], ["updated_at", "2020-06-18 03:49:33.387160"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 13.7ms | Allocations: 2500)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 23:56:31 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-17 23:56:31 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Luffy", "guesses"=>10, "user"=>{"name"=>"Luffy", "guesses"=>10}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms | Allocations: 1715)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luffy"], ["guesses", 10], ["created_at", "2020-06-18 03:56:31.699094"], ["updated_at", "2020-06-18 03:56:31.699094"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 10.1ms | Allocations: 3999)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 00:03:18 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 00:03:18 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Arya", "guesses"=>8, "user"=>{"name"=>"Arya", "guesses"=>8}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Arya"], ["guesses", 8], ["created_at", "2020-06-18 04:03:18.914498"], ["updated_at", "2020-06-18 04:03:18.914498"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 2215)
+
+
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 13.8ms | Allocations: 4742)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 00:06:38 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 00:06:38 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Sansa", "guesses"=>7, "user"=>{"name"=>"Sansa", "guesses"=>7}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 2641)
+
+
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sansa"], ["guesses", 7], ["created_at", "2020-06-18 04:06:38.025664"], ["updated_at", "2020-06-18 04:06:38.025664"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 7.5ms | Allocations: 4120)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 00:13:01 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 00:13:01 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Sansa", "guesses"=>7, "user"=>{"name"=>"Sansa", "guesses"=>7}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 2732)
+
+
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sansa"], ["guesses", 7], ["created_at", "2020-06-18 04:13:01.759359"], ["updated_at", "2020-06-18 04:13:01.759359"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 38ms (Views: 16.9ms | ActiveRecord: 13.3ms | Allocations: 4232)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 00:13:59 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 00:13:59 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Jon", "guesses"=>7, "user"=>{"name"=>"Jon", "guesses"=>7}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.2ms | Allocations: 1991)
+
+
+  [1m[35m (4.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jon"], ["guesses", 7], ["created_at", "2020-06-18 04:13:59.666715"], ["updated_at", "2020-06-18 04:13:59.666715"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 12.8ms | Allocations: 4279)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 08:46:12 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 08:46:12 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Tarkin", "guesses"=>9, "user"=>{"name"=>"Tarkin", "guesses"=>9}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 26ms (Views: 7.0ms | ActiveRecord: 17.0ms | Allocations: 6041)
+
+
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (16.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tarkin"], ["guesses", 9], ["created_at", "2020-06-18 12:46:12.431696"], ["updated_at", "2020-06-18 12:46:12.431696"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 55ms (Views: 0.5ms | ActiveRecord: 39.6ms | Allocations: 7856)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 08:49:13 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 08:49:13 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Han", "guesses"=>4, "user"=>{"name"=>"Han", "guesses"=>4}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.5ms | Allocations: 2961)
+
+
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Han"], ["guesses", 4], ["created_at", "2020-06-18 12:49:13.936961"], ["updated_at", "2020-06-18 12:49:13.936961"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 9.5ms | Allocations: 4437)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:19:19 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:19:19 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Parker", "guesses"=>7, "user"=>{"name"=>"Parker", "guesses"=>7}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.6ms | Allocations: 2874)
+
+
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Parker"], ["guesses", 7], ["created_at", "2020-06-18 13:19:19.922540"], ["updated_at", "2020-06-18 13:19:19.922540"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 14.6ms | Allocations: 4548)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:35:42 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:35:42 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Luffy", "guesses"=>6, "user"=>{"name"=>"Luffy", "guesses"=>6}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luffy"], ["guesses", 6], ["created_at", "2020-06-18 13:35:42.339154"], ["updated_at", "2020-06-18 13:35:42.339154"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.1ms | Allocations: 2013)
+
+
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 15.0ms | Allocations: 6410)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:36:20 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:36:20 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Steve", "guesses"=>6, "user"=>{"name"=>"Steve", "guesses"=>6}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.4ms | Allocations: 2426)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (8.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Steve"], ["guesses", 6], ["created_at", "2020-06-18 13:36:20.910545"], ["updated_at", "2020-06-18 13:36:20.910545"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 16.3ms | Allocations: 4667)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:42:45 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:42:45 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Stephen", "guesses"=>7, "user"=>{"name"=>"Stephen", "guesses"=>7}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stephen"], ["guesses", 7], ["created_at", "2020-06-18 13:42:45.285728"], ["updated_at", "2020-06-18 13:42:45.285728"]]
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 4.5ms | Allocations: 3023)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 24ms (Views: 1.0ms | ActiveRecord: 12.9ms | Allocations: 4920)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:44:06 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:44:06 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Boba", "guesses"=>6, "user"=>{"name"=>"Boba", "guesses"=>6}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Boba"], ["guesses", 6], ["created_at", "2020-06-18 13:44:06.293682"], ["updated_at", "2020-06-18 13:44:06.293682"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 3.0ms | Allocations: 4823)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:48:50 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:48:50 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Bob", "guesses"=>7, "user"=>{"name"=>"Bob", "guesses"=>7}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 93ms (Views: 88.3ms | ActiveRecord: 4.0ms | Allocations: 2560)
+
+
+  [1m[35m (88.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (27.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bob"], ["guesses", 7], ["created_at", "2020-06-18 13:48:50.694326"], ["updated_at", "2020-06-18 13:48:50.694326"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 151ms (Views: 0.8ms | ActiveRecord: 141.0ms | Allocations: 4849)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:52:09 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:52:09 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Thanos", "guesses"=>5, "user"=>{"name"=>"Thanos", "guesses"=>5}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.3ms | Allocations: 3439)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Thanos"], ["guesses", 5], ["created_at", "2020-06-18 13:52:09.433828"], ["updated_at", "2020-06-18 13:52:09.433828"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 7.2ms | Allocations: 4923)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 09:53:01 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 09:53:01 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"T'Challa", "guesses"=>9, "user"=>{"name"=>"T'Challa", "guesses"=>9}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 2757)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "T'Challa"], ["guesses", 9], ["created_at", "2020-06-18 13:53:01.926504"], ["updated_at", "2020-06-18 13:53:01.926504"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 10.9ms | Allocations: 5003)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:12:23 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:12:23 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Chopper", "guesses"=>11, "user"=>{"name"=>"Chopper", "guesses"=>11}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chopper"], ["guesses", 11], ["created_at", "2020-06-18 14:12:23.692650"], ["updated_at", "2020-06-18 14:12:23.692650"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.1ms | Allocations: 2559)
+
+
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 7.8ms | Allocations: 6906)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:14:26 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:14:26 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"beef", "guesses"=>8, "user"=>{"name"=>"beef", "guesses"=>8}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.5ms | Allocations: 3759)
+
+
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "beef"], ["guesses", 8], ["created_at", "2020-06-18 14:14:26.281400"], ["updated_at", "2020-06-18 14:14:26.281400"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 10.5ms | Allocations: 5213)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:20:43 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:20:43 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"beef", "guesses"=>13, "user"=>{"name"=>"beef", "guesses"=>13}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.5ms | Allocations: 3829)
+
+
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "beef"], ["guesses", 13], ["created_at", "2020-06-18 14:20:43.190236"], ["updated_at", "2020-06-18 14:20:43.190236"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 8.4ms | Allocations: 5322)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:21:34 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:21:34 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  Parameters: {"name"=>"Han Solo", "guesses"=>6, "user"=>{"name"=>"Han Solo", "guesses"=>6}}
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.6ms | Allocations: 3550)
+
+
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Han Solo"], ["guesses", 6], ["created_at", "2020-06-18 14:21:34.795802"], ["updated_at", "2020-06-18 14:21:34.795802"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 16.0ms | Allocations: 4715)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:22:41 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:22:41 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Jenkins", "guesses"=>11, "user"=>{"name"=>"Jenkins", "guesses"=>11}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.1ms | Allocations: 3566)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jenkins"], ["guesses", 11], ["created_at", "2020-06-18 14:22:41.854326"], ["updated_at", "2020-06-18 14:22:41.854326"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 9.8ms | Allocations: 5369)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:23:25 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:23:25 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Yoda", "guesses"=>7, "user"=>{"name"=>"Yoda", "guesses"=>7}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.9ms | Allocations: 3964)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yoda"], ["guesses", 7], ["created_at", "2020-06-18 14:23:25.485351"], ["updated_at", "2020-06-18 14:23:25.485351"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 12.3ms | Allocations: 5469)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:28:35 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:28:35 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"testing", "guesses"=>6, "user"=>{"name"=>"testing", "guesses"=>6}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 3301)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "testing"], ["guesses", 6], ["created_at", "2020-06-18 14:28:35.286886"], ["updated_at", "2020-06-18 14:28:35.286886"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 10.1ms | Allocations: 5547)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:30:57 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:30:57 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"beef", "guesses"=>8, "user"=>{"name"=>"beef", "guesses"=>8}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 3382)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "beef"], ["guesses", 8], ["created_at", "2020-06-18 14:30:57.398054"], ["updated_at", "2020-06-18 14:30:57.398054"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 9.7ms | Allocations: 5629)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:31:18 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:31:18 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Arya", "guesses"=>6, "user"=>{"name"=>"Arya", "guesses"=>6}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 4198)
+
+
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Arya"], ["guesses", 6], ["created_at", "2020-06-18 14:31:18.371169"], ["updated_at", "2020-06-18 14:31:18.371169"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 9.1ms | Allocations: 5704)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:41:57 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:41:57 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 4382)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"beef", "guesses"=>11, "user"=>{"name"=>"beef", "guesses"=>11}}
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "beef"], ["guesses", 11], ["created_at", "2020-06-18 14:41:57.510036"], ["updated_at", "2020-06-18 14:41:57.510036"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 10.7ms | Allocations: 2500)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:42:17 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:42:17 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  Parameters: {"name"=>"Yong", "guesses"=>6, "user"=>{"name"=>"Yong", "guesses"=>6}}
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 4083)
+
+
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yong"], ["guesses", 6], ["created_at", "2020-06-18 14:42:17.191895"], ["updated_at", "2020-06-18 14:42:17.191895"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 20ms (Views: 0.8ms | ActiveRecord: 13.9ms | Allocations: 5261)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNoodle Load (0.7ms)[0m  [1m[34mSELECT "noodles".* FROM "noodles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 5]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 6]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 7]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "noodles" WHERE "noodles"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ichiran"], ["imageUrl", "https://i.imgur.com/xWTTbBx.jpg"], ["created_at", "2020-06-18 14:43:26.886971"], ["updated_at", "2020-06-18 14:43:26.886971"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momosan"], ["imageUrl", "https://i.imgur.com/VCbUDIA.jpg"], ["created_at", "2020-06-18 14:43:26.892584"], ["updated_at", "2020-06-18 14:43:26.892584"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.6ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nakiryu"], ["imageUrl", "https://i.imgur.com/Ii1vbsK.jpg"], ["created_at", "2020-06-18 14:43:26.897544"], ["updated_at", "2020-06-18 14:43:26.897544"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoodle Create (0.3ms)[0m  [1m[32mINSERT INTO "noodles" ("name", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "tsuta"], ["imageUrl", "https://i.imgur.com/UwPJR2C.jpg"], ["created_at", "2020-06-18 14:43:26.904076"], ["updated_at", "2020-06-18 14:43:26.904076"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 37]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 43]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 45]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 46]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 48]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 55]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yoda"], ["guesses", 10], ["created_at", "2020-06-18 14:43:27.083456"], ["updated_at", "2020-06-18 14:43:27.083456"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luke"], ["guesses", 7], ["created_at", "2020-06-18 14:43:27.088580"], ["updated_at", "2020-06-18 14:43:27.088580"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Destroy (0.3ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScore Create (0.4ms)[0m  [1m[32mINSERT INTO "scores" ("user_id", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 57], ["guesses", 3], ["created_at", "2020-06-18 14:43:27.124604"], ["updated_at", "2020-06-18 14:43:27.124604"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:44:07 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:44:07 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Chewie", "guesses"=>6, "user"=>{"name"=>"Chewie", "guesses"=>6}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 12.8ms | Allocations: 5337)
+
+
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chewie"], ["guesses", 6], ["created_at", "2020-06-18 14:44:07.292286"], ["updated_at", "2020-06-18 14:44:07.292286"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 16.9ms | Allocations: 7149)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:45:23 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:45:23 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Han", "guesses"=>6, "user"=>{"name"=>"Han", "guesses"=>6}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 2257)
+
+
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Han"], ["guesses", 6], ["created_at", "2020-06-18 14:45:23.939075"], ["updated_at", "2020-06-18 14:45:23.939075"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 10.4ms | Allocations: 3733)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:47:07 -0400
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:47:07 -0400
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Leia", "guesses"=>7, "user"=>{"name"=>"Leia", "guesses"=>7}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 2261)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Leia"], ["guesses", 7], ["created_at", "2020-06-18 14:47:07.494541"], ["updated_at", "2020-06-18 14:47:07.494541"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 7.6ms | Allocations: 3770)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-18 10:47:35 -0400
+Started POST "/api/v1/users" for ::1 at 2020-06-18 10:47:35 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Mace", "guesses"=>5, "user"=>{"name"=>"Mace", "guesses"=>5}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."guesses" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.2ms | Allocations: 2344)
+
+
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mace"], ["guesses", 5], ["created_at", "2020-06-18 14:47:35.952079"], ["updated_at", "2020-06-18 14:47:35.952079"]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 7.0ms | Allocations: 3832)
+
+
