@@ -3211,3 +3211,66 @@ Processing by Api::V1::UsersController#create as JSON
 Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2501)
 
 
+Started POST "/api/v1/users" for ::1 at 2020-06-17 18:00:28 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Mara", "guesses"=>11, "user"=>{"name"=>"Mara", "guesses"=>11}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mara"], ["guesses", 11], ["created_at", "2020-06-17 22:00:28.820818"], ["updated_at", "2020-06-17 22:00:28.820818"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 8.6ms | Allocations: 5951)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 18:01:05 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 1357)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 18:04:59 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Rey", "guesses"=>11, "user"=>{"name"=>"Rey", "guesses"=>11}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rey"], ["guesses", 11], ["created_at", "2020-06-17 22:04:59.566421"], ["updated_at", "2020-06-17 22:04:59.566421"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 14ms (Views: 1.4ms | ActiveRecord: 6.0ms | Allocations: 2501)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 18:15:11 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Luffy", "guesses"=>8, "user"=>{"name"=>"Luffy", "guesses"=>8}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luffy"], ["guesses", 8], ["created_at", "2020-06-17 22:15:11.439935"], ["updated_at", "2020-06-17 22:15:11.439935"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 2512)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-06-17 19:11:24 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Mace", "guesses"=>7, "user"=>{"name"=>"Mace", "guesses"=>7}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "guesses", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mace"], ["guesses", 7], ["created_at", "2020-06-17 23:11:24.457213"], ["updated_at", "2020-06-17 23:11:24.457213"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 14.0ms | Allocations: 2500)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-06-17 19:11:28 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 1579)
+
+
